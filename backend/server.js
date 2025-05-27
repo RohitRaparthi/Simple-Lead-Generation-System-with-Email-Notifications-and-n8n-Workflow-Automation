@@ -7,9 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const N8N_WEBHOOK_URL = "https://projectsample.app.n8n.cloud/webhook-test/lead"; // Replace with your n8n webhook URL
+const N8N_WEBHOOK_URL = "https://projectsample.app.n8n.cloud/webhook/lead"; // Replace with your n8n webhook URL
 
-app.post("/submit-lead", async (req, res) => {
+app.post("/", async (req, res) => {
   const { name, email, company, message } = req.body;
   if (!name || !email) return res.status(400).json({ error: "Name and Email are required" });
 

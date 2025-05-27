@@ -1,0 +1,14 @@
+POST http://localhost:5000/
+Content-Type: application/json
+
+{
+  "name": "Teja",
+  "email": "teja.raparthi2003@gmail.com",
+  "company": "MyCompany",
+  "message": "Interested in the product"
+}
+
+###
+curl -X POST https://projectsample.app.n8n.cloud/webhook/lead \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Teja", "email": "teja.raparthi2003@gmail.com"}'
